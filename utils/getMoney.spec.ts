@@ -1,4 +1,4 @@
-import { getMoney } from "./getMoney";
+import { getMoney, renduMonnaie } from "./getMoney";
 
 describe("getMoney", () => {
   it("should give the correct money for 21", () => {
@@ -11,6 +11,16 @@ describe("getMoney", () => {
     for (let i = 4; i < 1000; i++) {
       const result = getMoney(i);
       const verif = result.nb10 * 10 + result.nb5 * 5 + result.nb2 * 2;
+      expect(verif).toEqual(i);
+    }
+  });
+});
+
+describe("renduMonnaie", () => {
+  it("should give the correct money for a lot of amounts >= 4", () => {
+    for (let i = 4; i < 1000; i++) {
+      const result = renduMonnaie(i);
+      const verif = result.piece10 * 10 + result.piece5 * 5 + result.piece2 * 2;
       expect(verif).toEqual(i);
     }
   });

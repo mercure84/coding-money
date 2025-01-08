@@ -36,3 +36,31 @@ export const getMoney = (sum: number) => {
   }
   return { nb2, nb10, nb5 };
 };
+
+export const renduMonnaie = (total: number) => {
+  let obj = {
+    montant: total,
+
+    piece10: 0,
+
+    piece5: 0,
+
+    piece2: 0,
+  };
+
+  let rest = total;
+
+  if (total % 2 !== 0) {
+    obj.piece5 = 1;
+
+    rest = total - 5;
+  }
+
+  obj.piece10 = Math.floor(rest / 10);
+
+  let rest10 = rest % 10;
+
+  obj.piece2 = Math.floor(rest10 / 2);
+
+  return obj;
+};
