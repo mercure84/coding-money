@@ -44,37 +44,43 @@ export default function Home() {
       </div>
       <div className="flex flex-row justify-around mt-8">
         {nb2 > 0 && (
-          <>
-            <p>{nb2}</p>
-            <Image
-              width={96}
-              // eslint-disable-next-line @typescript-eslint/no-require-imports
-              src={require("@/app/assets/2euros.jpg")}
-              alt="2 euros"
-            />
-          </>
+          <div className="card bg-base-100 w-96 shadow-xl mx-4">
+            <div className="card-body">
+              <h2 className="card-title">{nb2}</h2>
+              <Image
+                width={96}
+                // eslint-disable-next-line @typescript-eslint/no-require-imports
+                src={require("@/app/assets/2euros.jpg")}
+                alt="2 euros"
+              />
+            </div>
+          </div>
         )}
         {nb5 > 0 && (
-          <>
-            <p>{nb5}</p>
-            <Image
-              width={192}
-              // eslint-disable-next-line @typescript-eslint/no-require-imports
-              src={require("@/app/assets/5euros.png")}
-              alt="2 euros"
-            />
-          </>
+          <div className="card bg-base-100 w-96 shadow-xl mx-4">
+            <div className="card-body">
+              <h2 className="card-title">{nb5}</h2>
+              <Image
+                width={192}
+                // eslint-disable-next-line @typescript-eslint/no-require-imports
+                src={require("@/app/assets/5euros.png")}
+                alt="2 euros"
+              />
+            </div>
+          </div>
         )}
         {nb10 > 0 && (
-          <>
-            <p>{nb10}</p>
-            <Image
-              width={192}
-              // eslint-disable-next-line @typescript-eslint/no-require-imports
-              src={require("@/app/assets/10euros.png")}
-              alt="2 euros"
-            />
-          </>
+          <div className="card bg-base-100 w-96 shadow-xl mx-4">
+            <div className="card-body">
+              <h2 className="card-title">{nb10}</h2>
+              <Image
+                width={192}
+                // eslint-disable-next-line @typescript-eslint/no-require-imports
+                src={require("@/app/assets/10euros.png")}
+                alt="2 euros"
+              />
+            </div>
+          </div>
         )}
       </div>
     </div>
