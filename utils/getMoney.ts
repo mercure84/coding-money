@@ -22,7 +22,6 @@ export const getMoney = (sum: number) => {
     nb10 = Math.floor(rest / 10);
     rest = rest - 10 * nb10;
   }
-  console.log("Après billets de 10 ??", rest);
   if (rest >= 5) {
     nb5 = Math.floor(rest / 5);
     rest = rest - nb5 * 5;
@@ -38,7 +37,6 @@ export const getMoney = (sum: number) => {
 
   //verif
   const verif = 2 * nb2 + 5 * nb5 + 10 * nb10;
-  console.log(sum, verif);
   if (verif !== sum) {
     alert(
       "La banque s'est trompée, veuillez nous excuser pour la gêne occasionnée"
